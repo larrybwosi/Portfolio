@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 const Stars: React.FC = (props) => {
   const ref = useRef<any>();
-  const [sphere] = useState(() => inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const [sphere] = useState(() => Float32Array.from(inSphere(new Float32Array(5000), { radius: 1.2 })));
 
   useFrame((state:any, delta:any) => {
     ref.current.rotation.x -= delta / 10;
