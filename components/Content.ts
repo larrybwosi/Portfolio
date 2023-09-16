@@ -220,20 +220,24 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "Birder.io",
+    description:[
+    "The mobile app I developed allows users to connect with friends, send messages",
+    " create and join groups, create posts, and customize their profiles. Users can ",
+    "interact through profiles, activity feeds, text posts, video or photo posts, shared ",
+    "links, and more. The app prioritizes features that give users the ability to react and ",
+    "comment on users' posts, share each other's posts, and start conversations."],
     tags: [
       {
-        name: "react",
+        name: "expo",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "sanity",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "redux toolkit",
         color: "pink-text-gradient",
       },
     ],
@@ -241,20 +245,25 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Snapscape",
+    description:[
+      "Snapscape is a web app that allows users to post, share, and download ",
+      "images, describe images, and tag friends. Users can create posts with text ",
+      "and images, customize their profiles, and connect with friends. With features ",
+      "similar to social networking apps, Snapscape allows users to interact through activity ",
+      "feeds, shared links, and more."
+    ],
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "sanity",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "tailwind css",
         color: "pink-text-gradient",
       },
     ],
