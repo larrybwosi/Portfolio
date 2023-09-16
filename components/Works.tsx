@@ -15,7 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
-}:{index:any,name:string,description:any,tags:any,image:string,source_code_link:string}) => {
+}:{index:any,name:string,description:any,tags:any,image:any,source_code_link:string}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
