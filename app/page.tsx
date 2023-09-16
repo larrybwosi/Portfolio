@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
       </div>
       <About/> 
-      <Works/>
+      <Works/> 
       <div className='relative z-0'>
         <Contact />
         <StarsCanvas />
