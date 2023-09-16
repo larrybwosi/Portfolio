@@ -7,7 +7,7 @@ export default {
         name: 'content',
         title: 'Content',
         type: 'text',
-        validation: (Rule) => Rule.required(),
+        validation: (Rule:any) => Rule.required(),
       },
       {
         name: 'images',
@@ -20,7 +20,7 @@ export default {
         title: 'Author',
         type: 'reference',
         to: [{ type: 'user' }],
-        validation: (Rule) => Rule.required(),
+        validation: (Rule:any) => Rule.required(),
       },
       {
         name: 'likes',

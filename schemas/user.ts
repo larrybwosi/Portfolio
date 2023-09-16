@@ -7,13 +7,13 @@ export default{
         name: 'username',
         title: 'Username',
         type: 'string',
-        validation: (Rule) => Rule.required()
+        validation: (Rule:any) => Rule.required()
       },
       {
         name: 'name',
         title: 'Name',
         type: 'string',
-        validation: (Rule) => Rule.required()
+        validation: (Rule:any) => Rule.required()
       },
       {
         name: 'email',
