@@ -54,3 +54,19 @@ export async function sendMessage(conversationId, messageText, senderId) {
   
     return result.results[0].document;
   }
+
+ export async function fetchSiteData() {
+    try {
+      // Define your query
+      const query = '*[_type == "siteData"]';
+  
+      // Fetch the data from the API
+      const response = await client.fetch(query);
+  
+      // Return the fetched data
+      return response;
+    } catch (error) {
+      console.error('Error fetching site data:', error);
+      return null;
+    }
+  }

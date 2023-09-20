@@ -219,7 +219,7 @@ const testimonials = [
 ];
 
 const projects = [
-  {
+  { 
     name: "Birder.io",
     description:[
     "The mobile app I developed allows users to connect with friends, send messages",
