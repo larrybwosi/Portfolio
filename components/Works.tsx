@@ -7,6 +7,7 @@ import { SectionWrapper } from "./hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { projects } from "./Content";
+import  Image  from "next/image";
 
 const ProjectCard = ({
   index,
@@ -27,8 +28,10 @@ const ProjectCard = ({
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
-          <img
+          <Image
             src={image}
+            width={450}
+            height={450}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
@@ -39,7 +42,7 @@ const ProjectCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src="/assets/github.png"
+                src="../assets/github.png"
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />

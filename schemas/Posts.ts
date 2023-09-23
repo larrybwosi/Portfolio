@@ -4,16 +4,21 @@ export default {
     type: 'document',
     fields: [
       {
+        name: 'images',
+        title: 'Images',
+        type: 'array',
+        of: [{ type: 'image', options: { hotspot: true } }],
+      },
+      {
         name: 'content',
         title: 'Content',
         type: 'text',
         validation: (Rule:any) => Rule.required(),
       },
       {
-        name: 'images',
-        title: 'Images',
-        type: 'array',
-        of: [{ type: 'image', options: { hotspot: true } }],
+        name: 'title',
+        title: 'Title',
+        type: 'text',
       },
       {
         name: 'author',

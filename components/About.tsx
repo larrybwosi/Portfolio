@@ -6,8 +6,9 @@ import { SectionWrapper } from "./hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { content, overview, services } from "./Content";
 import { Tilt } from "react-tilt";
+import  Image  from "next/image";
 
-const ServiceCard = ({ index, title, icon }:{index:any,title:any,icon:any}) => (
+const ServiceCard = ({ index, title, icon }:any) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -16,8 +17,10 @@ const ServiceCard = ({ index, title, icon }:{index:any,title:any,icon:any}) => (
       <div
         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
-        <img
+        <Image
           src={icon}
+          width={450}
+          height={450}
           alt='web-development'
           className='w-16 h-16 object-contain'
         />
@@ -47,7 +50,7 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard key={service.title} index={index} icon={service.icon} title={service.title} />
         ))}
       </div>
     </>

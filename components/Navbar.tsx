@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { styles } from "./styles"; 
 import { logo, menu, close } from "../assets";
 import { navLinks } from "./Content";
+import Image from"next/image"
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,7 +43,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <Image src={logo} width={450} height={450} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Larry &nbsp;
             <span className='sm:block hidden'> | Birder.io Owner</span>
@@ -64,9 +65,11 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
+          <Image
             src={toggle ? close : menu}
             alt='menu'
+            width={450}
+            height={450}
             className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}
           />

@@ -2,7 +2,6 @@ import {
   mobile,
   backend,
   creator,
-  web,
   javascript,
   typescript,
   html,
@@ -24,6 +23,7 @@ import {
   tripguide,
   threejs,
 } from "../assets";
+import web from "../assets/web.png"
 
 export const content = {
   home: {
