@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion"; 
-import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";  
 
 import { styles } from "./styles";
 import { EarthCanvas } from "./canvas";
@@ -27,42 +26,42 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+  // const handleSubmit = (e:any) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    emailjs
-      .send(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Birder.io",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        process.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+  //   emailjs
+  //     .send(
+  //       process.env.EMAILJS_SERVICE_ID,
+  //       process.env.EMAILJS_TEMPLATE_ID,
+  //       {
+  //         from_name: form.name,
+  //         to_name: "Birder.io",
+  //         from_email: form.email,
+  //         to_email: "sujata@jsmastery.pro",
+  //         message: form.message,
+  //       },
+  //       process.env.VITE_APP_EMAILJS_PUBLIC_KEY
+  //     )
+  //     .then(
+  //       () => {
+  //         setLoading(false);
+  //         alert("Thank you. I will get back to you as soon as possible.");
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+  //         setForm({
+  //           name: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         setLoading(false);
+  //         console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-  };
+  //         alert("Ahh, something went wrong. Please try again.");
+  //       }
+  //     );
+  // };
 
   return (
     <div
