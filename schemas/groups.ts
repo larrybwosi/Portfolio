@@ -2,6 +2,19 @@ export default{
     name: 'groups',
     type: 'document',
     fields: [
+      {
+        name: 'name',
+        title: 'Name',
+        type: 'text'
+      },
+      {
+        name: 'image',
+        title: 'Image',
+        type: 'image',
+        options: {
+          hotspot: true
+        }
+      },
       
         {
             name: 'admins',
@@ -42,11 +55,7 @@ export default{
               {
                 name: 'timestamp',
                 type: 'datetime'
-              },
-              {
-                name: 'seen',
-                type: 'boolean'
-              },
+              }, 
               {
                 name:'caption',
                 type:'string'

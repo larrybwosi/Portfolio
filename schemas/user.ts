@@ -48,28 +48,7 @@ export default {
         },
       ],
     },
-    {
-      name: 'connections',
-      title: 'Connections',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'service',
-              title: 'Service',
-              type: 'string',
-            },
-            {
-              name: 'accountName',
-              title: 'Account Name',
-              type: 'string',
-            }, 
-          ],
-        },
-      ],
-    },
+    
     {
       name: 'country',
       title: 'Country',
@@ -130,6 +109,54 @@ export default {
         {
           type: 'reference',
           to: [{ type: 'user' }],
+        },
+      ],
+    },
+    {
+      name: 'pictures',
+      title: 'Pictures',
+      type: 'array',
+      of: [{ type: 'image', options: { hotspot: true } }],
+    },
+    {
+      name: 'connections',
+      title: 'Connections',
+      type: 'object',
+      fields: [
+        {
+          name: 'facebook',
+          title: 'Facebook',
+          type: 'string',
+        },
+        {
+          name: 'twitter',
+          title: 'Twitter',
+          type: 'string',
+        },
+        {
+          name: 'instagram',
+          title: 'Instagram',
+          type: 'string',
+        },
+        {
+          name: 'linkedin',
+          title: 'LinkedIn',
+          type: 'string',
+        },
+        {
+          name: 'youtube',
+          title: 'YouTube',
+          type: 'string',
+        },
+        {
+          name: 'snapchat',
+          title: 'Snapchat',
+          type: 'string',
+        },
+        {
+          name: 'other',
+          title: 'Other',
+          type: 'string',
         },
       ],
     },

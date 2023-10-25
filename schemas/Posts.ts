@@ -3,17 +3,18 @@ export default {
     title: 'Post',
     type: 'document',
     fields: [
-      {
-        name: 'images',
-        title: 'Images',
-        type: 'array',
-        of: [{ type: 'image', options: { hotspot: true } }],
-      },
+      
       {
         name: 'content',
         title: 'Content',
         type: 'text',
         validation: (Rule:any) => Rule.required(),
+      },
+      {
+        name: 'images',
+        title: 'Images',
+        type: 'array',
+        of: [{ type: 'image', options: { hotspot: true } }],
       },
       {
         name: 'title',
@@ -61,6 +62,12 @@ export default {
             ],
           },
         ],
+      },
+      {
+        name: 'tags',
+        title: 'Tags',
+        type: 'array',
+        of: [{ type: 'string' }],
       },
     ],
   };
